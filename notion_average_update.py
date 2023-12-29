@@ -16,11 +16,11 @@ today = datetime.now()
 yesterday = today - timedelta(days=1)
 today_date = today.date().isoformat()
 yesterday_date = yesterday.date().isoformat()
-root_dir = 'iqair_database/'
+root_dir = '/home/azureuser/tg_project/iqair_database/'
 
 if __name__ == '__main__':
     AQI = find_aqi_from_json(root_dir, yesterday)
-    average_aqi_yesterday = sum(AQI) / len(AQI)
+    average_aqi_yesterday = round(sum(AQI) / len(AQI))
     #print(average_aqi_yesterday)
 
     properties = {

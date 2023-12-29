@@ -27,7 +27,7 @@ def get_iqair_data(url):
             data = response.json()
             DATE_FORMAT = "%Y%m%d-%H%M%S"
             NOW = datetime.now()
-            file_path = 'iqair_database/{now}.json'.format(now=get_date_str(NOW, DATE_FORMAT))
+            file_path = '/home/azureuser/tg_project/iqair_database/{now}.json'.format(now=get_date_str(NOW, DATE_FORMAT))
             
             current_data = data['data']['current']
             pollution_data = current_data['pollution']
